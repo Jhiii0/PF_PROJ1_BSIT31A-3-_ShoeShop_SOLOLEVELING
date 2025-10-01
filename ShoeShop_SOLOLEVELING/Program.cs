@@ -1,23 +1,49 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
+// --- FINAL CLEAN USING STATEMENTS (Fixes all CS0246 errors) ---
+// Ang lahat ng ito ay kinakailangan para makita ang classes at interfaces
 using ShoeShop.Repository.Data;
-using Microsoft.Extensions.Configuration; // KINAKAILANGAN ITO PARA GUMANA ANG GetConnectionString
+using ShoeShop.Repository.Interfaces;
+using ShoeShop.Repository.Repositories;
+using ShoeShop.Services.Interfaces;
+using ShoeShop.Services.Mapping;
+using ShoeShop.Services.Services;
+// ---
 
 var builder = WebApplication.CreateBuilder(args);
 
-// IDAGDAG ANG LINES NA ITO PARA I-REGISTER ANG DB CONTEXT
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
+// 1. CONFIGURE DATABASE CONTEXT
 builder.Services.AddDbContext<ShoeShopDbContext>(options =>
-{
-    options.UseSqlite(connectionString);
-});
-// TAPOS DITO
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
+        ?? "Server=localhost;Database=ShoeShopDb;Trusted_Connection=True;MultipleActiveResultSets=true")
+);
 
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+// 2. CONFIGURE AUTO MAPPER 
+// Ito ang tamang paraan para i-target ang mapping profiles sa Services project
+builder.Services.AddAutoMapper(typeof(ShoeShop.Services.Services.InventoryService));
+
+
+// 3. REGISTER REPOSITORIES (Gamit ang AddScoped)
+builder.Services.AddScoped<IShoeRepository, ShoeRepository>();
+builder.Services.AddScoped<IStockPullOutRepository, StockPullOutRepository>();
+
+
+// 4. REGISTER SERVICES (Gamit ang AddScoped)
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+builder.Services.AddScoped<IPullOutService, PullOutService>();
+builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
+builder.Services.AddScoped<IReportService, ReportService>();
+
 
 var app = builder.Build();
 

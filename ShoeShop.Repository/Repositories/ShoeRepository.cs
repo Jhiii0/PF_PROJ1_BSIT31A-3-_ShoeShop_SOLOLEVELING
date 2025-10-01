@@ -2,10 +2,12 @@
 using ShoeShop.Repository.Data;
 using ShoeShop.Repository.Entities;
 using ShoeShop.Repository.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ShoeShop.Repository.Repositories
 {
-    // Tandaan: Ang ILogger ay dapat gamitin sa Services Layer, hindi sa Repository.
     public class ShoeRepository : IShoeRepository
     {
         private readonly ShoeShopDbContext _context;
@@ -15,20 +17,31 @@ namespace ShoeShop.Repository.Repositories
             _context = context;
         }
 
-        public async Task<Shoe> GetShoeByIdAsync(int id)
+        // Helper method para isama ang ColorVariations
+        private IQueryable<Shoe> GetShoeQuery()
+        {
+            return _context.Shoes.Include(s => s.ColorVariations);
+        }
+
+        // DITO ANG FIX: Inayos ang return type para maging nullable (Task<Shoe?>)
+        public async Task<Shoe?> GetShoeByColorVariationIdAsync(int colorVariationId)
+        {
+            // Ang logic ay hahanapin ang parent Shoe kung ang ID ng ColorVariation ay tugma
+            return await GetShoeQuery()
+                .FirstOrDefaultAsync(s => s.ColorVariations.Any(v => v.Id == colorVariationId));
+        }
+
+        // MISSING METHOD FIX: Ibinalik ang GetShoeByIdAsync na may tamang nullable return type
+        public async Task<Shoe?> GetShoeByIdAsync(int id)
         {
             // Kukunin ang shoe kasama ang color variations
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .FirstOrDefaultAsync(s => s.Id == id);
+            return await GetShoeQuery().FirstOrDefaultAsync(s => s.Id == id);
         }
 
         public async Task<IEnumerable<Shoe>> GetAllShoesAsync()
         {
             // Kukunin ang lahat ng shoes kasama ang color variations
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .ToListAsync();
+            return await GetShoeQuery().ToListAsync();
         }
 
         public async Task<Shoe> AddShoeAsync(Shoe shoe)
