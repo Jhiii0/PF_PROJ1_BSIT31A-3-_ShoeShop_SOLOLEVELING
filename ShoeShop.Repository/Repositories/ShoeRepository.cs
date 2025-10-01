@@ -2,10 +2,12 @@
 using ShoeShop.Repository.Data;
 using ShoeShop.Repository.Entities;
 using ShoeShop.Repository.Interfaces;
+using System.Collections.Generic;
+using System.Linq; // Kailangan ito para sa .Any() at iba pa
+using System.Threading.Tasks;
 
 namespace ShoeShop.Repository.Repositories
 {
-    // Tandaan: Ang ILogger ay dapat gamitin sa Services Layer, hindi sa Repository.
     public class ShoeRepository : IShoeRepository
     {
         private readonly ShoeShopDbContext _context;
@@ -15,20 +17,24 @@ namespace ShoeShop.Repository.Repositories
             _context = context;
         }
 
-        public async Task<Shoe> GetShoeByIdAsync(int id)
+        // --- Helper method for common includes ---
+        private IQueryable<Shoe> GetShoeQuery()
         {
-            // Kukunin ang shoe kasama ang color variations
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .FirstOrDefaultAsync(s => s.Id == id);
+            return _context.Shoes.Include(s => s.ColorVariations);
+        }
+
+        // --- Core Repository Methods ---
+
+        public async Task<Shoe?> GetShoeByIdAsync(int id)
+        {
+            // Gumamit ng GetShoeQuery para sa includes
+            return await GetShoeQuery().FirstOrDefaultAsync(s => s.Id == id);
         }
 
         public async Task<IEnumerable<Shoe>> GetAllShoesAsync()
         {
-            // Kukunin ang lahat ng shoes kasama ang color variations
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .ToListAsync();
+            // Gumamit ng GetShoeQuery para sa includes
+            return await GetShoeQuery().ToListAsync();
         }
 
         public async Task<Shoe> AddShoeAsync(Shoe shoe)
@@ -40,7 +46,7 @@ namespace ShoeShop.Repository.Repositories
 
         public async Task UpdateShoeAsync(Shoe shoe)
         {
-            // I-update lang ang status at mag-save ng changes
+            // Hindi na kailangan i-fetch muna, direkta na ang update sa entity
             _context.Shoes.Update(shoe);
             await _context.SaveChangesAsync();
         }
@@ -53,6 +59,14 @@ namespace ShoeShop.Repository.Repositories
                 _context.Shoes.Remove(shoeToDelete);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        // ITO ANG MISSING METHOD IMPLEMENTATION (Inaayos ang CS0535 error)
+        public async Task<Shoe?> GetShoeByColorVariationIdAsync(int colorVariationId)
+        {
+            // Hahanapin ang parent Shoe kung ang colorVariationId ay tugma sa alinman sa kanyang variations.
+            return await GetShoeQuery()
+                .FirstOrDefaultAsync(s => s.ColorVariations.Any(v => v.Id == colorVariationId));
         }
     }
 }
