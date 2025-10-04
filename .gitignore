@@ -1,5 +1,7 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
+﻿# This .gitignore file was automatically created by Microsoft(R) Visual Studio...
+#...
 /.vs
+
+# Exclude build results and object files
+[Bb]in/
+[Oo]bj/
