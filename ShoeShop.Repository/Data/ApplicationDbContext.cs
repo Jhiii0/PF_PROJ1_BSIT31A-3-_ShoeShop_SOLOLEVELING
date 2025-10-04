@@ -15,6 +15,7 @@ namespace ShoeShop.Repository.Data
         public DbSet<ShoeColorVariation> ShoeColorVariations { get; set; }
         public DbSet<StockPullOut> StockPullOuts { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

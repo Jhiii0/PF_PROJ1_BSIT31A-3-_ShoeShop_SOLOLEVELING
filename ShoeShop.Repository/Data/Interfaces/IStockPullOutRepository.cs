@@ -6,9 +6,10 @@ namespace ShoeShop.Repository.Interfaces
 {
     public interface IStockPullOutRepository
     {
-        Task<StockPullOut> AddPullOutAsync(StockPullOut pullOut);
-        Task<StockPullOut?> GetPullOutByIdAsync(int pullOutId);
-        Task UpdatePullOutAsync(StockPullOut pullOut);
-        Task<IEnumerable<StockPullOut>> GetAllPullOutsAsync();
+        Task AddAsync(StockPullOut pullOut);
+        Task<IEnumerable<StockPullOut>> GetAllAsync(); // optional basic list
+        Task<IEnumerable<StockPullOut>> GetAllPullOutsAsync(); // used in InventoryService
+        Task<StockPullOut?> GetByIdAsync(int id);
+        Task SaveChangesAsync();
     }
 }
