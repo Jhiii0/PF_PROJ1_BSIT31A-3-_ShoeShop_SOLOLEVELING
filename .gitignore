@@ -1,5 +1,14 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Visual Studio Temporary Files and Binaries
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.suo
+*.user
+*.log
+*.suo
+*.cache
+# Nuget packages
+packages/
 
-/.vs
+# Ignore the VS directory (kung saan lumabas ang /vs mo)
+/vs
