@@ -14,15 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShoeShop_SOLOLEVELING")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:ShoeShop_SOLOLEVELING/obj/Debug/net8.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d25a37ada5828569acb87224a2e7bd9306026339")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eedce0e0150e08c590d01c7fc369ecc402db0642")]
->>>>>>> Stashed changes:ShoeShop_SOLOLEVELING/obj/Debug/net9.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a2d96e2dca45a9ff9409dcc85e29f4190d406f5")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+619f222529cc1a6344d1f4c6a8b72721a85e3397")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShoeShop_SOLOLEVELING")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShoeShop_SOLOLEVELING")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
