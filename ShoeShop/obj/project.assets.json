@@ -31,6 +31,7 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+<<<<<<< HEAD
       "Azure.Core/1.25.0": {
         "type": "package",
         "dependencies": {
@@ -75,6 +76,8 @@
           }
         }
       },
+=======
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -348,6 +351,7 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {
+<<<<<<< HEAD
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -415,6 +419,16 @@
           }
         }
       },
+=======
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "Microsoft.EntityFrameworkCore/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -499,6 +513,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.EntityFrameworkCore.SqlServer/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -516,6 +531,26 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+=======
       "Microsoft.EntityFrameworkCore.Tools/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -558,11 +593,16 @@
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
+          "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+=======
           "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
@@ -570,6 +610,19 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+<<<<<<< HEAD
+      "Microsoft.Extensions.Caching.Memory/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
+=======
       "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -577,11 +630,16 @@
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
+          "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
+=======
           "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
@@ -589,6 +647,15 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+<<<<<<< HEAD
+      "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+=======
       "Microsoft.Extensions.DependencyInjection/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -596,11 +663,16 @@
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
+          "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+=======
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
@@ -608,6 +680,15 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+<<<<<<< HEAD
+      "Microsoft.Extensions.DependencyInjection/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
+=======
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
         "type": "package",
         "compile": {
@@ -632,11 +713,16 @@
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
+=======
           "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
@@ -644,6 +730,32 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+<<<<<<< HEAD
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encodings.Web": "8.0.0",
+          "System.Text.Json": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+=======
       "Microsoft.Extensions.Logging/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -653,15 +765,56 @@
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+=======
           "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+<<<<<<< HEAD
+      "Microsoft.Extensions.Logging/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+=======
+      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+<<<<<<< HEAD
+          "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+=======
+          "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+            "related": ".xml"
+          }
+        },
+        "build": {
+<<<<<<< HEAD
           "buildTransitive/net6.0/_._": {}
         }
       },
@@ -887,15 +1040,33 @@
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {
+=======
+          "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Options/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Options.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+=======
+          "lib/net8.0/Microsoft.Extensions.Options.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "build": {
+<<<<<<< HEAD
           "buildTransitive/netcoreapp3.1/_._": {}
         },
         "runtimeTargets": {
@@ -903,6 +1074,25 @@
             "assetType": "runtime",
             "rid": "win"
           }
+=======
+          "buildTransitive/net6.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         }
       },
       "Mono.TextTemplating/2.2.1": {
@@ -948,6 +1138,7 @@
         }
       },
       "System.Composition/6.0.0": {
+<<<<<<< HEAD
         "type": "package",
         "dependencies": {
           "System.Composition.AttributedModel": "6.0.0",
@@ -1207,11 +1398,28 @@
         },
         "compile": {
           "lib/net6.0/System.Reflection.Metadata.dll": {
+=======
+        "type": "package",
+        "dependencies": {
+          "System.Composition.AttributedModel": "6.0.0",
+          "System.Composition.Convention": "6.0.0",
+          "System.Composition.Hosting": "6.0.0",
+          "System.Composition.Runtime": "6.0.0",
+          "System.Composition.TypedParts": "6.0.0"
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Composition.AttributedModel/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Composition.AttributedModel.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Reflection.Metadata.dll": {
+          "lib/net6.0/System.Composition.AttributedModel.dll": {
             "related": ".xml"
           }
         },
@@ -1219,6 +1427,31 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "System.Composition.Convention/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Composition.AttributedModel": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Composition.Convention.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+<<<<<<< HEAD
+          "lib/net6.0/System.Reflection.Metadata.dll": {
+=======
+          "lib/net6.0/System.Composition.Convention.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+<<<<<<< HEAD
       "System.Runtime/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1238,22 +1471,110 @@
         },
         "compile": {
           "lib/net6.0/_._": {
+=======
+      "System.Composition.Hosting/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Composition.Runtime": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Composition.Hosting.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Runtime.Caching.dll": {
+          "lib/net6.0/System.Composition.Hosting.dll": {
             "related": ".xml"
           }
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Composition.Runtime/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Composition.Runtime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Composition.Runtime.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Composition.TypedParts/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Composition.AttributedModel": "6.0.0",
+          "System.Composition.Hosting": "6.0.0",
+          "System.Composition.Runtime": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Composition.TypedParts.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+<<<<<<< HEAD
+          "lib/net6.0/System.Runtime.Caching.dll": {
+=======
+          "lib/net6.0/System.Composition.TypedParts.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+<<<<<<< HEAD
         },
         "runtimeTargets": {
           "runtimes/win/lib/net6.0/System.Runtime.Caching.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
+=======
+        }
+      },
+      "System.IO.Pipelines/6.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Reflection.Metadata/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections.Immutable": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Reflection.Metadata.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reflection.Metadata.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -1272,15 +1593,30 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+<<<<<<< HEAD
       "System.Security.AccessControl/6.0.0": {
+=======
+      "System.Text.Encoding.CodePages/6.0.0": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
+<<<<<<< HEAD
           "lib/net6.0/_._": {
+=======
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/System.Security.AccessControl.dll": {
+=======
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
@@ -1288,23 +1624,36 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         },
         "runtimeTargets": {
+<<<<<<< HEAD
           "runtimes/win/lib/net6.0/System.Security.AccessControl.dll": {
+=======
+          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "assetType": "runtime",
             "rid": "win"
           }
         }
       },
+<<<<<<< HEAD
       "System.Security.Cryptography.Cng/5.0.0": {
+=======
+      "System.Text.Encodings.Web/8.0.0": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         "type": "package",
         "dependencies": {
           "System.Formats.Asn1": "5.0.0"
         },
         "compile": {
+<<<<<<< HEAD
           "ref/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
+=======
+          "lib/net8.0/System.Text.Encodings.Web.dll": {
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
             "related": ".xml"
           }
@@ -1427,6 +1776,8 @@
           }
         },
         "runtime": {
+=======
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
           "lib/net8.0/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
@@ -1476,6 +1827,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+<<<<<<< HEAD
       "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
         "compile": {
@@ -1528,6 +1880,11 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "ShoeShop.Repository": "1.0.0"
         },
+=======
+      "ShoeShop.Services/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         "compile": {
           "bin/placeholder/ShoeShop.Services.dll": {}
         },
@@ -1567,6 +1924,7 @@
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
+<<<<<<< HEAD
     "Azure.Core/1.25.0": {
       "sha512": "X8Dd4sAggS84KScWIjEbFAdt2U1KDolQopTPoHVubG2y3CM54f9l6asVrP5Uy384NWXjsspPYaJgz5xHc+KvTA==",
       "type": "package",
@@ -1605,6 +1963,8 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+=======
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -2144,6 +2504,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Data.SqlClient/5.1.1": {
       "sha512": "MW5E9HFvCaV069o8b6YpuRDPBux8s96qDnOJ+4N9QNUCs7c5W3KxwQ+ftpAjbMUlImL+c9WR+l+f5hzjkqhu2g==",
       "type": "package",
@@ -2224,6 +2585,11 @@
     "Microsoft.EntityFrameworkCore/8.0.0": {
       "sha512": "SoODat83pGQUpWB9xULdMX6tuKpq/RTXDuJ2WeC1ldUKcKzLkaFJD1n+I0nOLY58odez/e7z8b6zdp235G/kyg==",
       "type": "package",
+=======
+    "Microsoft.EntityFrameworkCore/8.0.0": {
+      "sha512": "SoODat83pGQUpWB9xULdMX6tuKpq/RTXDuJ2WeC1ldUKcKzLkaFJD1n+I0nOLY58odez/e7z8b6zdp235G/kyg==",
+      "type": "package",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "path": "microsoft.entityframeworkcore/8.0.0",
       "files": [
         ".nupkg.metadata",
@@ -2293,6 +2659,7 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.EntityFrameworkCore.SqlServer/8.0.0": {
       "sha512": "GeOmafQn64HyQtYcI/Omv/D/YVHd1zEkWbP3zNQu4oC+usE9K0qOp0R8KgWWFEf8BU4tXuYbok40W0SjfbaK/A==",
       "type": "package",
@@ -2310,6 +2677,11 @@
     "Microsoft.EntityFrameworkCore.Tools/8.0.0": {
       "sha512": "zRdaXiiB1gEA0b+AJTd2+drh78gkEA4HyZ1vqNZrKq4xwW8WwavSiQsoeb1UsIMZkocLMBbhQYWClkZzuTKEgQ==",
       "type": "package",
+=======
+    "Microsoft.EntityFrameworkCore.Tools/8.0.0": {
+      "sha512": "zRdaXiiB1gEA0b+AJTd2+drh78gkEA4HyZ1vqNZrKq4xwW8WwavSiQsoeb1UsIMZkocLMBbhQYWClkZzuTKEgQ==",
+      "type": "package",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "path": "microsoft.entityframeworkcore.tools/8.0.0",
       "hasTools": true,
       "files": [
@@ -2698,6 +3070,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Identity.Client/4.47.2": {
       "sha512": "SPgesZRbXoDxg8Vv7k5Ou0ee7uupVw0E8ZCc4GKw25HANRLz1d5OSr0fvTVQRnEswo5Obk8qD4LOapYB+n5kzQ==",
       "type": "package",
@@ -2929,12 +3302,31 @@
       "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "type": "package",
       "path": "microsoft.win32.systemevents/6.0.0",
+=======
+    "Mono.TextTemplating/2.2.1": {
+      "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
+      "type": "package",
+      "path": "mono.texttemplating/2.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
+        "lib/net472/Mono.TextTemplating.dll",
+        "lib/netstandard2.0/Mono.TextTemplating.dll",
+        "mono.texttemplating.2.2.1.nupkg.sha512",
+        "mono.texttemplating.nuspec"
+      ]
+    },
+    "System.CodeDom/4.4.0": {
+      "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
+      "type": "package",
+      "path": "system.codedom/4.4.0",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+<<<<<<< HEAD
         "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
         "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Win32.SystemEvents.dll",
@@ -2991,6 +3383,23 @@
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
+=======
+        "lib/net461/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.4.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Collections.Immutable/6.0.0": {
+      "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
+      "type": "package",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "path": "system.collections.immutable/6.0.0",
       "files": [
         ".nupkg.metadata",
@@ -3143,6 +3552,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Configuration.ConfigurationManager/6.0.1": {
       "sha512": "jXw9MlUu/kRfEU0WyTptAVueupqIeE3/rl0EZDMlf8pcvJnitQ8HeVEp69rZdaStXwTV72boi/Bhw8lOeO+U2w==",
       "type": "package",
@@ -3276,6 +3686,11 @@
     "System.IO.Pipelines/6.0.3": {
       "sha512": "ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
       "type": "package",
+=======
+    "System.IO.Pipelines/6.0.3": {
+      "sha512": "ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
+      "type": "package",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "path": "system.io.pipelines/6.0.3",
       "files": [
         ".nupkg.metadata",
@@ -3298,6 +3713,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Memory/4.5.4": {
       "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "type": "package",
@@ -3389,6 +3805,11 @@
     "System.Reflection.Metadata/6.0.1": {
       "sha512": "III/lNMSn0ZRBuM9m5Cgbiho5j81u0FAEagFX5ta2DKbljZ3T0IpD8j+BIiHQPeKqJppWS9bGEp6JnKnWKze0g==",
       "type": "package",
+=======
+    "System.Reflection.Metadata/6.0.1": {
+      "sha512": "III/lNMSn0ZRBuM9m5Cgbiho5j81u0FAEagFX5ta2DKbljZ3T0IpD8j+BIiHQPeKqJppWS9bGEp6JnKnWKze0g==",
+      "type": "package",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "path": "system.reflection.metadata/6.0.1",
       "files": [
         ".nupkg.metadata",
@@ -3563,6 +3984,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Security.AccessControl/6.0.0": {
       "sha512": "AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ==",
       "type": "package",
@@ -3863,6 +4285,11 @@
     "System.Text.Encoding.CodePages/6.0.0": {
       "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
       "type": "package",
+=======
+    "System.Text.Encoding.CodePages/6.0.0": {
+      "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
+      "type": "package",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
       "path": "system.text.encoding.codepages/6.0.0",
       "files": [
         ".nupkg.metadata",
@@ -4034,6 +4461,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Threading.Tasks.Extensions/4.5.4": {
       "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
@@ -4099,6 +4527,8 @@
       "path": "../ShoeShop.Repository/ShoeShop.Repository.csproj",
       "msbuildProject": "../ShoeShop.Repository/ShoeShop.Repository.csproj"
     },
+=======
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
     "ShoeShop.Services/1.0.0": {
       "type": "project",
       "path": "../ShoeShop.Services/ShoeShop.Services.csproj",
@@ -4204,5 +4634,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project ShoeShop.Services is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project ShoeShop.Services supports: net9.0 (.NETCoreApp,Version=v9.0)",
+      "libraryId": "ShoeShop.Services",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -109,18 +109,33 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
+<<<<<<< HEAD
           "net8.0"
+=======
+          "net9.0"
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
+<<<<<<< HEAD
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
               "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj": {
                 "projectPath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj"
+=======
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj": {
+                "projectPath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj"
+              },
+              "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop\\ShoeShop.csproj": {
+                "projectPath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop\\ShoeShop.csproj"
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
               }
             }
           }
@@ -138,8 +153,13 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
+<<<<<<< HEAD
         "net8.0": {
           "targetAlias": "net8.0",
+=======
+        "net9.0": {
+          "targetAlias": "net9.0",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",

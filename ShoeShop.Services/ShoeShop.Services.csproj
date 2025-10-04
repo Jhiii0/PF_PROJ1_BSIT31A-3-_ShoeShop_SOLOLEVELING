@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+	  <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
@@ -9,12 +9,33 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+<<<<<<< HEAD
   </ItemGroup>
 
   <ItemGroup>
     <!-- Project Reference sa Repository Layer.
          Ito ang tama dahil ang Services layer ay nakadepende sa Repository layer. -->
     <ProjectReference Include="..\ShoeShop.Repository\ShoeShop.Repository.csproj" />
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
   </ItemGroup>
 
-</Project>
+  <ItemGroup>
+    <ProjectReference Include="..\ShoeShop.Repository\ShoeShop.Repository.csproj" />
+=======
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Project Reference sa Repository Layer.
+         Ito ang tama dahil ang Services layer ay nakadepende sa Repository layer. -->
+    <ProjectReference Include="..\ShoeShop.Repository\ShoeShop.Repository.csproj" />
+    <ProjectReference Include="..\ShoeShop\ShoeShop.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+
+  </Project>

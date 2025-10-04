@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\appsettings.json
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\ShoeShop_SOLOLEVELING.staticwebassets.runtime.json
@@ -9,8 +10,16 @@ C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_S
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\ShoeShop_SOLOLEVELING.pdb
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+<<<<<<< HEAD
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Azure.Identity.dll
+=======
+<<<<<<< HEAD
+=======
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Azure.Identity.dll
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Humanizer.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -144,3 +153,8 @@ C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_S
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.pdb
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.genruntimeconfig.cache
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ref\ShoeShop_SOLOLEVELING.dll
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
