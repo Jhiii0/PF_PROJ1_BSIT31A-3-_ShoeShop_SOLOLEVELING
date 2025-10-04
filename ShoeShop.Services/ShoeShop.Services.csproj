@@ -9,6 +9,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+<<<<<<< HEAD
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShoeShop.Repository\ShoeShop.Repository.csproj" />
+=======
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
   </ItemGroup>
 
   <ItemGroup>

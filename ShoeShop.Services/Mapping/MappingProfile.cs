@@ -2,6 +2,13 @@
 <<<<<<< HEAD
 using ShoeShop.Repository.Entities;
 using ShoeShop.Services.DTOs;
+
+namespace ShoeShop.Services.Mapping
+{
+=======
+<<<<<<< HEAD
+using ShoeShop.Repository.Entities;
+using ShoeShop.Services.DTOs;
 using System.Linq;
 
 namespace ShoeShop.Services.Mapping
@@ -15,10 +22,42 @@ namespace ShoeShop.Services.Mapping
     // FINAL FIX 1: Kailangan itong mag-inherit sa AutoMapper.Profile
     // FINAL FIX 2: Kailangan itong maging public class
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
     public class MappingProfile : Profile
     {
         public MappingProfile()
         {
+<<<<<<< HEAD
+            // --- Shoe Mappings ---
+            CreateMap<Shoe, ShoeDto>().ReverseMap();
+            CreateMap<CreateShoeDto, Shoe>();
+
+            // --- Shoe Color Variation Mappings ---
+            CreateMap<ShoeColorVariation, ShoeColorVariationDto>()
+                .ForMember(dest => dest.IsLowStock,
+                           opt => opt.MapFrom(src => src.StockQuantity <= src.ReorderLevel));
+            CreateMap<CreateShoeColorVariationDto, ShoeColorVariation>();
+
+            // --- Purchase Order Mappings ---
+            CreateMap<PurchaseOrder, PurchaseOrderDto>();
+            CreateMap<CreatePurchaseOrderDto, PurchaseOrder>();
+            CreateMap<PurchaseOrderItem, PurchaseOrderItemDto>();
+            CreateMap<CreatePurchaseOrderItemDto, PurchaseOrderItem>();
+
+            // --- Pull Out Mappings ---
+            // Tandaan: Kailangan ng Include() sa Repository para gumana ang ShoeName mapping
+            CreateMap<StockPullOut, PullOutRequestDto>()
+                .ForMember(dest => dest.ShoeName,
+                           opt => opt.MapFrom(src => src.ShoeColorVariation.Shoe.Name));
+
+            CreateMap<CreatePullOutDto, StockPullOut>();
+
+            // --- Supplier Mappings ---
+            CreateMap<Supplier, SupplierDto>().ReverseMap();
+        }
+    }
+}
+=======
 <<<<<<< HEAD
             // --- SHOE MAPPINGS (DTO <-> ENTITY) ---
 
@@ -99,3 +138,4 @@ namespace ShoeShop.Services.Mapping
     }
 }
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a

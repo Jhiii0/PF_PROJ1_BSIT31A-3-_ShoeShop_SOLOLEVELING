@@ -1,9 +1,16 @@
 ﻿using AutoMapper;
 using ShoeShop.Repository.Entities;
 <<<<<<< HEAD
+// ITO ANG FINAL FIX: Gamitin ang alias para wala nang ambiguity
+using RepoInterfaces = ShoeShop.Repository.Interfaces;
+using ShoeShop.Services.DTOs;
+using ShoeShop.Services.Interfaces; // Para sa IInventoryService
+=======
+<<<<<<< HEAD
 using ShoeShop.Repository.Interfaces;
 using ShoeShop.Services.DTOs;
 using ShoeShop.Services.Interfaces;
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +20,12 @@ namespace ShoeShop.Services.Services
 {
     public class InventoryService : IInventoryService
     {
+<<<<<<< HEAD
+        // Ginamit ang alias
+        private readonly RepoInterfaces.IShoeRepository _shoeRepository;
+        private readonly IMapper _mapper;
+
+=======
         private readonly IShoeRepository _shoeRepository;
         private readonly IStockPullOutRepository _pullOutRepository;
         private readonly IMapper _mapper;
@@ -58,6 +71,7 @@ namespace ShoeShop.Services.Services
         private readonly IMapper _mapper;
 
         // Ginamit ang alias sa constructor
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         public InventoryService(RepoInterfaces.IShoeRepository shoeRepository, IMapper mapper)
         {
             _shoeRepository = shoeRepository;
@@ -77,21 +91,30 @@ namespace ShoeShop.Services.Services
 
             var createdShoe = await _shoeRepository.AddShoeAsync(shoe);
             return _mapper.Map<ShoeDto>(createdShoe);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         }
 
         public async Task<IEnumerable<ShoeDto>> GetAllShoesAsync()
         {
 <<<<<<< HEAD
+            var shoes = await _shoeRepository.GetAllShoesAsync();
+=======
+<<<<<<< HEAD
             var shoes = await _shoeRepository.GetAllWithVariationsAsync();
 =======
             var shoes = await _shoeRepository.GetAllShoesAsync();
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
             return _mapper.Map<IEnumerable<ShoeDto>>(shoes);
         }
 
         public async Task<ShoeDto?> GetShoeByIdAsync(int id)
         {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             var shoe = await _shoeRepository.GetByIdWithVariationsAsync(id);
             return shoe == null ? null : _mapper.Map<ShoeDto>(shoe);
@@ -115,6 +138,7 @@ namespace ShoeShop.Services.Services
             var shoeToUpdate = await _shoeRepository.GetByIdWithVariationsAsync(id);
             if (shoeToUpdate == null)
 =======
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
             var shoe = await _shoeRepository.GetShoeByIdAsync(id);
             return _mapper.Map<ShoeDto>(shoe);
         }
@@ -123,11 +147,18 @@ namespace ShoeShop.Services.Services
         {
             var existingShoe = await _shoeRepository.GetShoeByIdAsync(id);
             if (existingShoe == null)
+<<<<<<< HEAD
+=======
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
             {
                 throw new KeyNotFoundException($"Shoe with ID {id} not found.");
             }
 
+<<<<<<< HEAD
+            _mapper.Map(updatedShoeDto, existingShoe);
+            await _shoeRepository.UpdateShoeAsync(existingShoe);
+=======
 <<<<<<< HEAD
             _mapper.Map(dto, shoeToUpdate);
 
@@ -145,10 +176,13 @@ namespace ShoeShop.Services.Services
             _mapper.Map(updatedShoeDto, existingShoe);
             await _shoeRepository.UpdateShoeAsync(existingShoe);
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         }
 
         public async Task DeleteShoeAsync(int id)
         {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             var shoeToDelete = await _shoeRepository.GetByIdWithVariationsAsync(id);
             if (shoeToDelete != null)
@@ -184,12 +218,16 @@ namespace ShoeShop.Services.Services
             await _shoeRepository.UpdateAsync(shoe);
             await _shoeRepository.SaveChangesAsync();
 =======
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
             await _shoeRepository.DeleteShoeAsync(id);
         }
 
         public async Task<bool> AdjustStockAsync(int colorVariationId, int quantityChange, string reason, string user)
         {
+<<<<<<< HEAD
+=======
             // Paggamit ng _shoeRepository
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
             var shoe = await _shoeRepository.GetShoeByColorVariationIdAsync(colorVariationId);
 
             if (shoe == null)
@@ -211,11 +249,16 @@ namespace ShoeShop.Services.Services
 
             variation.StockQuantity += quantityChange;
             await _shoeRepository.UpdateShoeAsync(shoe);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
 
             return true;
         }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         // --- Color Variations ---
 
@@ -302,6 +345,7 @@ namespace ShoeShop.Services.Services
                 CreateMap<StockPullOut, PullOutRequestDto>();
             }
 =======
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         public async Task<int> GetStockQuantityAsync(int colorVariationId)
         {
             var shoe = await _shoeRepository.GetShoeByColorVariationIdAsync(colorVariationId);
@@ -310,7 +354,10 @@ namespace ShoeShop.Services.Services
                 throw new KeyNotFoundException($"Shoe variation ID {colorVariationId} not found.");
             }
             return shoe.ColorVariations.FirstOrDefault(v => v.Id == colorVariationId)?.StockQuantity ?? 0;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         }
     }
 }

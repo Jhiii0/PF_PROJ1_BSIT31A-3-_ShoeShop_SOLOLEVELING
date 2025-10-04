@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+﻿using ShoeShop.Services.DTOs;
+=======
+<<<<<<< HEAD
 ﻿using System.Threading.Tasks;
 
 namespace ShoeShop.Services.Interfaces
@@ -13,6 +16,7 @@ namespace ShoeShop.Services.Interfaces
 ﻿using ShoeShop.Services.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
 
 namespace ShoeShop.Services.Interfaces
 {
@@ -22,10 +26,15 @@ namespace ShoeShop.Services.Interfaces
         Task<PurchaseOrderDto> ReceiveOrderAsync(int orderId, int shoeColorVariationId, int quantityReceived);
         Task<IEnumerable<PurchaseOrderDto>> GetOrderHistoryAsync();
         Task<PurchaseOrderDto> GetOrderByIdAsync(int orderId);
+<<<<<<< HEAD
+        Task<IEnumerable<SupplierDto>> GetAllSuppliersAsync();
+        Task<SupplierDto> AddSupplierAsync(SupplierDto supplierDto);
+=======
 
         // Supplier management methods
         Task<IEnumerable<SupplierDto>> GetAllSuppliersAsync();
         Task<SupplierDto> AddSupplierAsync(SupplierDto supplierDto);
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
     }
 }

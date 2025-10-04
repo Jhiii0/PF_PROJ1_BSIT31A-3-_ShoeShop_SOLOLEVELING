@@ -83,6 +83,15 @@
   ],
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Services\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Services\\ShoeShop.Services.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Services\\ShoeShop.Services.csproj",
+      "targetGraphs": []
+    },
+    {
       "code": "NU1108",
       "level": "Error",
       "message": "Cycle detected. \r\n  ShoeShop.Services -> ShoeShop -> ShoeShop.Services.",

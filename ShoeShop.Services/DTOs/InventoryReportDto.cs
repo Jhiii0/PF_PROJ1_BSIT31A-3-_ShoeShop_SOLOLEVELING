@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+﻿// SA InventoryReportDto.cs FILE
+namespace ShoeShop.Services.DTOs
+{
+    public class InventoryReportDto
+    {
+        public decimal TotalStockValue { get; set; } // Fixes CS0117
+        public int LowStockCount { get; set; }       // Fixes CS0117
+        public int TotalPullOutsPending { get; set; } // Fixes CS0117
+=======
+<<<<<<< HEAD
 ﻿namespace ShoeShop.Services.DTOs
 {
     public class InventoryReportDto
@@ -19,5 +29,6 @@ namespace ShoeShop.Services.DTOs
         public int LowStockCount { get; set; }
         public int TotalPullOutsPending { get; set; }
 >>>>>>> origin/memberC
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
     }
 }
