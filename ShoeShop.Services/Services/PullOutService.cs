@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using AutoMapper;
 using ShoeShop.Repository.Interfaces; // <-- Tiyakin na TAMA ang reference at namespace na ito (CS0246)
 using ShoeShop.Services.DTOs;
@@ -5,10 +6,22 @@ using ShoeShop.Services.Interfaces;
 using System; // Kailangan para sa InvalidOperationException
 using System.Collections.Generic;
 using System.Linq; // Kailangan para sa .Where(p => p.Status == "Pending")
+=======
+<<<<<<< HEAD
+﻿using AutoMapper;
+using ShoeShop.Repository.Interfaces;
+using ShoeShop.Services.DTOs;
+=======
+﻿using ShoeShop.Services.DTOs;
+>>>>>>> origin/memberC
+using ShoeShop.Services.Interfaces;
+using System.Collections.Generic;
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
 using System.Threading.Tasks;
 
 namespace ShoeShop.Services.Services
 {
+<<<<<<< HEAD
     public class PullOutService : IPullOutService
     {
         private readonly IStockPullOutRepository _pullOutRepository; // Line 10: Tiyakin na may Project Reference sa Repository
@@ -96,19 +109,70 @@ namespace ShoeShop.Services.Services
             pullOut.Status = "Rejected";
             await _pullOutRepository.UpdatePullOutAsync(pullOut);
             return true;
+=======
+<<<<<<< HEAD
+    // Implementation ng Pull Out Service
+    public class PullOutService : IPullOutService
+    {
+        private readonly IStockPullOutRepository _pullOutRepository;
+        private readonly IMapper _mapper;
+
+        // Constructor para sa Dependency Injection
+        public PullOutService(IStockPullOutRepository pullOutRepository, IMapper mapper)
+        {
+            _pullOutRepository = pullOutRepository;
+            _mapper = mapper;
+        }
+
+        public async Task<IEnumerable<StockPullOutDto>> GetAllPullOutsAsync()
+        {
+            // Kukunin ang lahat ng pull out entities mula sa repository
+            var pullOuts = await _pullOutRepository.GetAllPullOutsAsync();
+
+            // I-ma-map ang entities sa DTOs bago i-return
+            return _mapper.Map<IEnumerable<StockPullOutDto>>(pullOuts);
+=======
+    public class PullOutService : IPullOutService
+    {
+        public async Task<PullOutRequestDto> RequestPullOutAsync(CreatePullOutDto dto)
+        {
+            return await Task.FromResult(new PullOutRequestDto());
+        }
+
+        public async Task<PullOutRequestDto> ApprovePullOutAsync(int requestId, string approvedBy)
+        {
+            return await Task.FromResult(new PullOutRequestDto());
+        }
+
+        public async Task<PullOutRequestDto> RejectPullOutAsync(int requestId, string reason)
+        {
+            return await Task.FromResult(new PullOutRequestDto());
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         }
 
         public async Task<IEnumerable<PullOutRequestDto>> GetPendingPullOutsAsync()
         {
+<<<<<<< HEAD
             var pending = await _pullOutRepository.GetAllPullOutsAsync();
             var pendingList = pending.Where(p => p.Status == "Pending").ToList();
             return _mapper.Map<IEnumerable<PullOutRequestDto>>(pendingList);
+=======
+            return await Task.FromResult(new List<PullOutRequestDto>());
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
         }
 
         public async Task<IEnumerable<PullOutRequestDto>> GetPullOutHistoryAsync()
         {
+<<<<<<< HEAD
             var history = await _pullOutRepository.GetAllPullOutsAsync();
             return _mapper.Map<IEnumerable<PullOutRequestDto>>(history);
         }
     }
 }
+=======
+            return await Task.FromResult(new List<PullOutRequestDto>());
+>>>>>>> origin/memberC
+        }
+    }
+}
+>>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
