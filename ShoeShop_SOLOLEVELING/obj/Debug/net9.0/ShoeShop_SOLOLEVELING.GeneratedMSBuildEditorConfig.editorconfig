@@ -1,11 +1,14 @@
 is_global = true
 <<<<<<< HEAD:ShoeShop_SOLOLEVELING/obj/Debug/net8.0/ShoeShop_SOLOLEVELING.GeneratedMSBuildEditorConfig.editorconfig
 build_property.TargetFramework = net8.0
+<<<<<<< HEAD:ShoeShop_SOLOLEVELING/obj/Debug/net8.0/ShoeShop_SOLOLEVELING.GeneratedMSBuildEditorConfig.editorconfig
+=======
 =======
 build_property.TargetFramework = net9.0
 build_property.TargetFramework = net9.0
 build_property.TargetPlatformMinVersion = 
 >>>>>>> origin/memberC:ShoeShop_SOLOLEVELING/obj/Debug/net9.0/ShoeShop_SOLOLEVELING.GeneratedMSBuildEditorConfig.editorconfig
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7:ShoeShop_SOLOLEVELING/obj/Debug/net9.0/ShoeShop_SOLOLEVELING.GeneratedMSBuildEditorConfig.editorconfig
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 using ShoeShop.Repository.Entities;
 using ShoeShop.Services.DTOs;
 
@@ -7,12 +9,15 @@ namespace ShoeShop.Services.Mapping
 {
 =======
 <<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 using ShoeShop.Repository.Entities;
 using ShoeShop.Services.DTOs;
 using System.Linq;
 
 namespace ShoeShop.Services.Mapping
 {
+<<<<<<< HEAD
+=======
 =======
 using ShoeShop.Repository.Entities; // Kailangan para sa Entity Models
 using ShoeShop.Services.DTOs;      // Kailangan para sa DTO Models
@@ -23,10 +28,13 @@ namespace ShoeShop.Services.Mapping
     // FINAL FIX 2: Kailangan itong maging public class
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
     public class MappingProfile : Profile
     {
         public MappingProfile()
         {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             // --- Shoe Mappings ---
             CreateMap<Shoe, ShoeDto>().ReverseMap();
@@ -59,6 +67,7 @@ namespace ShoeShop.Services.Mapping
 }
 =======
 <<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             // --- SHOE MAPPINGS (DTO <-> ENTITY) ---
 
             // Shoe Entity to Shoe DTO (Kaya mong i-display ang database data)
@@ -112,6 +121,8 @@ namespace ShoeShop.Services.Mapping
         }
     }
 }
+<<<<<<< HEAD
+=======
 =======
             // --- Shoe Mappings ---
             
@@ -139,3 +150,4 @@ namespace ShoeShop.Services.Mapping
 }
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7

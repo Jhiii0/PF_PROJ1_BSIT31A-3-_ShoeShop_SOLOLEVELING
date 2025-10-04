@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ﻿using AutoMapper;
 using ShoeShop.Repository.Interfaces;
 using ShoeShop.Services.DTOs;
 using ShoeShop.Services.Interfaces;
 =======
 <<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 ﻿using ShoeShop.Services.Interfaces;
 using System.Threading.Tasks;
 using System;
@@ -38,6 +41,8 @@ namespace ShoeShop.Services.Services
         }
     }
 }
+<<<<<<< HEAD
+=======
 =======
 ﻿// SA ShoeShop.Services\Services\PurchaseOrderService.cs FILE:
 
@@ -167,3 +172,4 @@ namespace ShoeShop.Services.Services
 }
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7

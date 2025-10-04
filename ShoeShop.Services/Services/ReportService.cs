@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
 <<<<<<< HEAD
+using ShoeShop.Services.DTOs; // CRITICAL: Para sa StockPullOutDto, InventoryReportDto, etc.
+using ShoeShop.Services.Interfaces; // CRITICAL: Para sa IReportService, IInventoryService, etc.
+=======
+<<<<<<< HEAD
 using ShoeShop.Repository.Interfaces;
 using ShoeShop.Services.DTOs;
 using ShoeShop.Services.Interfaces;
@@ -17,6 +21,7 @@ using ShoeShop.Repository.Interfaces;
 using ShoeShop.Services.DTOs; // FIX: Kailangan ito para sa lahat ng DTOs
 using ShoeShop.Services.Interfaces; // FIX: Kailangan para sa IReportService
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +29,18 @@ using System.Threading.Tasks;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 namespace ShoeShop.Services.Services
 {
     public class ReportService : IReportService
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         private readonly IStockPullOutRepository _pullOutRepository;
         private readonly IMapper _mapper;
@@ -38,6 +48,7 @@ namespace ShoeShop.Services.Services
         // Tandaan: Kung kailangan mo ng IInventoryRepository, idagdag ito sa constructor
 =======
 <<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         public ReportService()
         {
             // Inject dependencies kung kailangan (DbContext, Repositories, etc.)
@@ -91,6 +102,8 @@ namespace ShoeShop.Services.Services
         }
     }
 }
+<<<<<<< HEAD
+=======
 =======
         private readonly IStockPullOutRepository _pullOutRepository;
         private readonly IMapper _mapper;
@@ -180,3 +193,4 @@ namespace ShoeShop.Services.Services
 }
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7

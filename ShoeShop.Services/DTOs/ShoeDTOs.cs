@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+﻿namespace ShoeShop.Services.DTOs
+=======
+<<<<<<< HEAD
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace ShoeShop.Services.DTOs
@@ -65,6 +68,7 @@ namespace ShoeShop.Services.DTOs
 
 namespace ShoeShop.Services.DTOs
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 {
     public class ShoeDto
     {
@@ -72,6 +76,9 @@ namespace ShoeShop.Services.DTOs
         public string ModelName { get; set; } = string.Empty;
         public string Brand { get; set; } = string.Empty;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         public double RetailPrice { get; set; }
         public bool IsActive { get; set; }
 
@@ -79,6 +86,8 @@ namespace ShoeShop.Services.DTOs
         public List<ColorVariationDto> ColorVariations { get; set; } = new();
     }
 }
+<<<<<<< HEAD
+=======
 =======
         public decimal RetailPrice { get; set; }
         public bool IsActive { get; set; }
@@ -121,3 +130,4 @@ namespace ShoeShop.Services.DTOs
 }
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7

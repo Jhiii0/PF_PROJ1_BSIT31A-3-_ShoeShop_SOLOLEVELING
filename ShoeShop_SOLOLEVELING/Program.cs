@@ -5,6 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 =======
+<<<<<<< HEAD
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+=======
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,6 +18,7 @@ using Microsoft.Extensions.Hosting;
 // --- FINAL CLEAN USING STATEMENTS (Fixes all CS0246 errors) ---
 // Ang lahat ng ito ay kinakailangan para makita ang classes at interfaces
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 using ShoeShop.Repository.Data;
 using ShoeShop.Repository.Interfaces;
 using ShoeShop.Repository.Repositories;
@@ -20,6 +26,9 @@ using ShoeShop.Services.Interfaces;
 using ShoeShop.Services.Mapping;
 using ShoeShop.Services.Services;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +40,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddAutoMapper(typeof(ShoeShop.Services.Services.InventoryService));
+<<<<<<< HEAD
+
+builder.Services.AddControllersWithViews();
+
+=======
 
 builder.Services.AddControllersWithViews();
 
@@ -57,14 +71,18 @@ builder.Services.AddAutoMapper(typeof(ShoeShop.Services.Services.InventoryServic
 
 // 3. REGISTER REPOSITORIES (Gamit ang AddScoped)
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 builder.Services.AddScoped<IShoeRepository, ShoeRepository>();
 builder.Services.AddScoped<IStockPullOutRepository, StockPullOutRepository>();
 
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 // 4. REGISTER SERVICES (Gamit ang AddScoped)
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<IPullOutService, PullOutService>();
 builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();

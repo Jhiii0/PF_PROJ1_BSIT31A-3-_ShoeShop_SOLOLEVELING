@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿<<<<<<< HEAD
 ﻿namespace ShoeShop.Repository.Interfaces
 {
     public interface ISupplierRepository

@@ -13,6 +13,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Project Reference sa Repository Layer.
+         Ito ang tama dahil ang Services layer ay nakadepende sa Repository layer. -->
+    <ProjectReference Include="..\ShoeShop.Repository\ShoeShop.Repository.csproj" />
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ShoeShop.Repository\ShoeShop.Repository.csproj" />
 =======
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a

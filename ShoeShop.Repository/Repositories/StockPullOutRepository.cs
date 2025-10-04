@@ -12,20 +12,29 @@ namespace ShoeShop.Repository.Repositories
     public class StockPullOutRepository : IStockPullOutRepository
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         // Assuming ApplicationDbContext ang pangalan ng DbContext mo
         private readonly ApplicationDbContext _context;
 
         public StockPullOutRepository(ApplicationDbContext context) // I-adjust ang type ng context kung iba
+<<<<<<< HEAD
+=======
 =======
         private readonly ShoeShopDbContext _context; // Assuming ShoeShopDbContext ang pangalan
 
         public StockPullOutRepository(ShoeShopDbContext context)
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         {
             _context = context;
         }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         // --- IMPLEMENTASYON PARA TUGMA SA IStockPullOutRepository.cs ---
 
         // FIX for CS0535: Ginawa itong AddAsync para tugma sa interface at InventoryService
@@ -59,11 +68,14 @@ namespace ShoeShop.Repository.Repositories
         public async Task<StockPullOut> AddPullOutAsync(StockPullOut pullOut)
         {
             await _context.StockPullOuts.AddAsync(pullOut);
+<<<<<<< HEAD
+=======
 =======
         public async Task<StockPullOut> AddPullOutAsync(StockPullOut pullOut)
         {
             _context.StockPullOuts.Add(pullOut);
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             await _context.SaveChangesAsync();
             return pullOut;
         }
@@ -92,5 +104,9 @@ namespace ShoeShop.Repository.Repositories
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7

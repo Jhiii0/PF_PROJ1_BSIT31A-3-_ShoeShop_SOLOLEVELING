@@ -4,19 +4,26 @@
 <<<<<<< HEAD
 ﻿using ShoeShop.Services.DTOs;
 =======
+<<<<<<< HEAD
+﻿using ShoeShop.Services.DTOs;
+=======
 ﻿using ShoeShop.Services.DTOs; // FINAL FIX: Kailangan ito para makita ang ShoeDto at CreateShoeDto
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ShoeShop.Services.Interfaces
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     public interface IInventoryService
     {
 =======
 <<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
     public interface IInventoryService
     {
         Task<ShoeDto> CreateShoeAsync(CreateShoeDto dto);
@@ -35,6 +42,8 @@ namespace ShoeShop.Services.Interfaces
 
         // BAGONG METHOD para sa ReportsController
         Task<IEnumerable<StockPullOutDto>> GetAllPullOutHistoryAsync();
+<<<<<<< HEAD
+=======
 =======
     // FINAL FIX: Tiyakin na public ang interface
     public interface IInventoryService
@@ -59,5 +68,6 @@ namespace ShoeShop.Services.Interfaces
         Task<int> GetStockQuantityAsync(int colorVariationId);
 >>>>>>> origin/memberC
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
     }
 }

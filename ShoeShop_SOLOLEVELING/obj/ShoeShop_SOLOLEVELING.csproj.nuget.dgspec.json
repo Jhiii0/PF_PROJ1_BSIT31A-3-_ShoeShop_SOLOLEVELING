@@ -224,6 +224,8 @@
               "version": "[12.0.1, )"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
@@ -235,6 +237,7 @@
               "target": "Package",
               "version": "[8.0.0, )"
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             }
           },
           "imports": [

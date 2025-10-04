@@ -141,8 +141,13 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
+<<<<<<< HEAD
+        "net8.0": {
+          "targetAlias": "net8.0",
+=======
         "net9.0": {
           "targetAlias": "net9.0",
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",

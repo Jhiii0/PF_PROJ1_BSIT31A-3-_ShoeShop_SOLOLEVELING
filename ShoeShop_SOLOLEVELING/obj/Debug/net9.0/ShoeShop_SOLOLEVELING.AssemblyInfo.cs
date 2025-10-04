@@ -15,6 +15,9 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD:ShoeShop_SOLOLEVELING/obj/Debug/net8.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baa679a163131a211b3d0c45b6ae9aa8481b7dfa")]
+=======
+<<<<<<< HEAD:ShoeShop_SOLOLEVELING/obj/Debug/net8.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c9b9b443d51004ddce3aab3e68e06c96daafdde")]
 =======
 <<<<<<< HEAD:ShoeShop_SOLOLEVELING/obj/Debug/net8.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
@@ -23,6 +26,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d2fc7165268166f5e867e42691f5e9348040254")]
 >>>>>>> origin/memberC:ShoeShop_SOLOLEVELING/obj/Debug/net9.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a:ShoeShop_SOLOLEVELING/obj/Debug/net9.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7:ShoeShop_SOLOLEVELING/obj/Debug/net9.0/ShoeShop_SOLOLEVELING.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyProductAttribute("ShoeShop_SOLOLEVELING")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShoeShop_SOLOLEVELING")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

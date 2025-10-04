@@ -13,16 +13,22 @@ namespace ShoeShop.Repository.Repositories
     public class SupplierRepository : ISupplierRepository
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         // Ginamit na ang ApplicationDbContext
         private readonly ApplicationDbContext _context;
 
         // Ginamit na ang ApplicationDbContext sa constructor
         public SupplierRepository(ApplicationDbContext context)
+<<<<<<< HEAD
+=======
 =======
         private readonly ShoeShopDbContext _context;
 
         public SupplierRepository(ShoeShopDbContext context)
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
         {
             _context = context;
         }
@@ -34,7 +40,11 @@ namespace ShoeShop.Repository.Repositories
 <<<<<<< HEAD
             // Ito ang code na nagco-cause ng error kung hindi pa naka-declare sa DbContext
 =======
+<<<<<<< HEAD
+            // Ito ang code na nagco-cause ng error kung hindi pa naka-declare sa DbContext
+=======
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
             _context.Suppliers.Add(supplier);
             await _context.SaveChangesAsync();
             return supplier;
@@ -59,5 +69,9 @@ namespace ShoeShop.Repository.Repositories
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> origin/memberC
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7

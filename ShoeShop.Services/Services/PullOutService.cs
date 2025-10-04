@@ -1,5 +1,12 @@
 <<<<<<< HEAD
 ﻿using AutoMapper;
+using ShoeShop.Repository.Interfaces;
+using ShoeShop.Services.DTOs;
+using ShoeShop.Services.Interfaces;
+using System.Collections.Generic;
+=======
+<<<<<<< HEAD
+﻿using AutoMapper;
 using ShoeShop.Repository.Interfaces; // <-- Tiyakin na TAMA ang reference at namespace na ito (CS0246)
 using ShoeShop.Services.DTOs;
 using ShoeShop.Services.Interfaces;
@@ -17,10 +24,13 @@ using ShoeShop.Services.DTOs;
 using ShoeShop.Services.Interfaces;
 using System.Collections.Generic;
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
 using System.Threading.Tasks;
 
 namespace ShoeShop.Services.Services
 {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     public class PullOutService : IPullOutService
     {
@@ -111,6 +121,7 @@ namespace ShoeShop.Services.Services
             return true;
 =======
 <<<<<<< HEAD
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
     // Implementation ng Pull Out Service
     public class PullOutService : IPullOutService
     {
@@ -131,6 +142,11 @@ namespace ShoeShop.Services.Services
 
             // I-ma-map ang entities sa DTOs bago i-return
             return _mapper.Map<IEnumerable<StockPullOutDto>>(pullOuts);
+<<<<<<< HEAD
+        }
+    }
+}
+=======
 =======
     public class PullOutService : IPullOutService
     {
@@ -176,3 +192,4 @@ namespace ShoeShop.Services.Services
     }
 }
 >>>>>>> b30b4460a836dea4b1bca5ee8bbf6eb0894b246a
+>>>>>>> bcac366a079e9ad835d6feb753f8e19dcc833bc7
