@@ -19,14 +19,39 @@ namespace ShoeShop.Repository.Repositories
 
         // Helper method para isama ang ColorVariations
         private IQueryable<Shoe> GetShoeQuery()
+<<<<<<< HEAD
         {
             return _context.Shoes.Include(s => s.ColorVariations);
+=======
+        {
+            return _context.Shoes.Include(s => s.ColorVariations);
+        }
+
+        // DITO ANG FIX: Inayos ang return type para maging nullable (Task<Shoe?>)
+        public async Task<Shoe?> GetShoeByColorVariationIdAsync(int colorVariationId)
+        {
+            // Ang logic ay hahanapin ang parent Shoe kung ang ID ng ColorVariation ay tugma
+            return await GetShoeQuery()
+                .FirstOrDefaultAsync(s => s.ColorVariations.Any(v => v.Id == colorVariationId));
+        }
+
+        // MISSING METHOD FIX: Ibinalik ang GetShoeByIdAsync na may tamang nullable return type
+        public async Task<Shoe?> GetShoeByIdAsync(int id)
+        {
+            // Kukunin ang shoe kasama ang color variations
+            return await GetShoeQuery().FirstOrDefaultAsync(s => s.Id == id);
+>>>>>>> origin/memberC
         }
 
         // 1. ADD METHOD: Tamang AddAsync implementation
         public async Task AddAsync(Shoe entity)
         {
+<<<<<<< HEAD
             await _context.Shoes.AddAsync(entity);
+=======
+            // Kukunin ang lahat ng shoes kasama ang color variations
+            return await GetShoeQuery().ToListAsync();
+>>>>>>> origin/memberC
         }
 
         // 2. UPDATE METHOD: Tamang UpdateAsync implementation

@@ -11,14 +11,21 @@ namespace ShoeShop.Repository.Repositories
     // FINAL FIX: Tiyakin na public ang class declaration
     public class StockPullOutRepository : IStockPullOutRepository
     {
+<<<<<<< HEAD
         // Assuming ApplicationDbContext ang pangalan ng DbContext mo
         private readonly ApplicationDbContext _context;
 
         public StockPullOutRepository(ApplicationDbContext context) // I-adjust ang type ng context kung iba
+=======
+        private readonly ShoeShopDbContext _context; // Assuming ShoeShopDbContext ang pangalan
+
+        public StockPullOutRepository(ShoeShopDbContext context)
+>>>>>>> origin/memberC
         {
             _context = context;
         }
 
+<<<<<<< HEAD
         // --- IMPLEMENTASYON PARA TUGMA SA IStockPullOutRepository.cs ---
 
         // FIX for CS0535: Ginawa itong AddAsync para tugma sa interface at InventoryService
@@ -52,6 +59,11 @@ namespace ShoeShop.Repository.Repositories
         public async Task<StockPullOut> AddPullOutAsync(StockPullOut pullOut)
         {
             await _context.StockPullOuts.AddAsync(pullOut);
+=======
+        public async Task<StockPullOut> AddPullOutAsync(StockPullOut pullOut)
+        {
+            _context.StockPullOuts.Add(pullOut);
+>>>>>>> origin/memberC
             await _context.SaveChangesAsync();
             return pullOut;
         }
@@ -77,4 +89,8 @@ namespace ShoeShop.Repository.Repositories
                 .ToListAsync();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/memberC

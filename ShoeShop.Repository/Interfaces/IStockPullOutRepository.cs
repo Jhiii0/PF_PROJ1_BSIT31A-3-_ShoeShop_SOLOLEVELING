@@ -13,6 +13,9 @@ namespace ShoeShop.Repository.Interfaces
         Task<StockPullOut?> GetPullOutByIdAsync(int pullOutId);
         Task UpdatePullOutAsync(StockPullOut pullOut);
         Task<IEnumerable<StockPullOut>> GetAllPullOutsAsync();
+<<<<<<< HEAD
         Task AddAsync(StockPullOut entity);
+=======
+>>>>>>> origin/memberC
     }
 }

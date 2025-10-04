@@ -12,11 +12,17 @@ namespace ShoeShop.Repository.Repositories
 {
     public class SupplierRepository : ISupplierRepository
     {
+<<<<<<< HEAD
         // Ginamit na ang ApplicationDbContext
         private readonly ApplicationDbContext _context;
 
         // Ginamit na ang ApplicationDbContext sa constructor
         public SupplierRepository(ApplicationDbContext context)
+=======
+        private readonly ShoeShopDbContext _context;
+
+        public SupplierRepository(ShoeShopDbContext context)
+>>>>>>> origin/memberC
         {
             _context = context;
         }
@@ -25,7 +31,10 @@ namespace ShoeShop.Repository.Repositories
 
         public async Task<Supplier> AddSupplierAsync(Supplier supplier)
         {
+<<<<<<< HEAD
             // Ito ang code na nagco-cause ng error kung hindi pa naka-declare sa DbContext
+=======
+>>>>>>> origin/memberC
             _context.Suppliers.Add(supplier);
             await _context.SaveChangesAsync();
             return supplier;
@@ -47,4 +56,8 @@ namespace ShoeShop.Repository.Repositories
             await _context.SaveChangesAsync();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/memberC
