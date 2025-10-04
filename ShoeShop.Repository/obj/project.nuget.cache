@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BilW27MbMLQ=",
+  "dgSpecHash": "9077K2hZSNk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj",
   "expectedPackageFiles": [
@@ -16,11 +16,14 @@
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0\\microsoft.entityframeworkcore.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.0\\microsoft.entityframeworkcore.analyzers.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.0\\microsoft.entityframeworkcore.design.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.0\\microsoft.entityframeworkcore.relational.8.0.0.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.0\\microsoft.entityframeworkcore.sqlite.8.0.0.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.0\\microsoft.entityframeworkcore.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.0\\microsoft.entityframeworkcore.sqlserver.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.0\\microsoft.entityframeworkcore.tools.8.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
@@ -46,6 +49,10 @@
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\Jhirz\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
@@ -80,15 +87,5 @@
     "C:\\Users\\Jhirz\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Jhirz\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\Jhirz\\source\\repos\\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\\ShoeShop.Repository\\ShoeShop.Repository.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

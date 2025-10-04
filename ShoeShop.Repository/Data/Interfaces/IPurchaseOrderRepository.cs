@@ -6,18 +6,10 @@ namespace ShoeShop.Repository.Interfaces
 {
     public interface IPurchaseOrderRepository
     {
-        // 1. Missing Method: AddOrderAsync (ginagamit sa CreateOrderAsync)
-        Task<PurchaseOrder> AddOrderAsync(PurchaseOrder order);
-
-        // 2. Missing Method: GetOrderByIdAsync (ginagamit sa ReceiveOrderAsync at GetOrderByIdAsync)
-        Task<PurchaseOrder?> GetOrderByIdAsync(int orderId);
-
-        // 3. Missing Method: UpdateOrderAsync (ginagamit sa ReceiveOrderAsync)
-        Task UpdateOrderAsync(PurchaseOrder order);
-
-        // 4. Missing Method: GetAllOrdersAsync (ginagamit sa GetOrderHistoryAsync)
-        Task<IEnumerable<PurchaseOrder>> GetAllOrdersAsync();
-
-        // ... (Iba pang methods kung mayroon man)
+        Task<IEnumerable<PurchaseOrder>> GetAllAsync();
+        Task<PurchaseOrder?> GetByIdAsync(int id);
+        Task<PurchaseOrder> CreateAsync(PurchaseOrder purchaseOrder);
+        Task UpdateAsync(PurchaseOrder purchaseOrder);
+        Task DeleteAsync(int id);
     }
 }
