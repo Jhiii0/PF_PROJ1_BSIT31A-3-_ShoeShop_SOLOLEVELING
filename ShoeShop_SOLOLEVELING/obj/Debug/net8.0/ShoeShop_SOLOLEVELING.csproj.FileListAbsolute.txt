@@ -12,6 +12,8 @@ C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_S
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -148,6 +150,7 @@ C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_S
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.AssemblyInfoInputs.cache
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.AssemblyInfo.cs
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.csproj.CoreCompileInputs.cache
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.RazorAssemblyInfo.cache
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.RazorAssemblyInfo.cs

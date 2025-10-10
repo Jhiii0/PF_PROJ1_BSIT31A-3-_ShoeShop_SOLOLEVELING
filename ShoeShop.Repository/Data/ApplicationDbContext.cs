@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ShoeShop.Repository.Entities;
 
 namespace ShoeShop.Repository.Data
 {
-    public class ApplicationDbContext : DbContext
+    // The class must inherit from IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -16,11 +18,15 @@ namespace ShoeShop.Repository.Data
         public DbSet<StockPullOut> StockPullOuts { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+        public DbSet<PurchaseOrderItem> PurchaseOrderItems { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Optional: Maaari kang magdagdag ng configuration dito kung kinakailangan
+            // This line is crucial for Identity to configure its tables
             base.OnModelCreating(modelBuilder);
+
+            // Your existing data seeding can go here if you have any
         }
     }
 }
