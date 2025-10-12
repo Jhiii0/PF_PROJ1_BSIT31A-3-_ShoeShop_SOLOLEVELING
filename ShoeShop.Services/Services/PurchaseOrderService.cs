@@ -1,43 +1,71 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using AutoMapper;
+using ShoeShop.Repository.Data.Interfaces;
 using ShoeShop.Repository.Entities;
-using ShoeShop.Repository.Interfaces;
+using ShoeShop.Services.DTOs;
 using ShoeShop.Services.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ShoeShop.Services.Services
 {
     public class PurchaseOrderService : IPurchaseOrderService
     {
-        private readonly IPurchaseOrderRepository _repository;
+        private readonly IPurchaseOrderRepository _purchaseOrderRepository;
+        private readonly IShoeRepository _shoeRepository;
+        private readonly IMapper _mapper;
 
-        public PurchaseOrderService(IPurchaseOrderRepository repository)
+        public PurchaseOrderService(IPurchaseOrderRepository purchaseOrderRepository, IShoeRepository shoeRepository, IMapper mapper)
         {
-            _repository = repository;
+            _purchaseOrderRepository = purchaseOrderRepository;
+            _shoeRepository = shoeRepository;
+            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<PurchaseOrder>> GetAllAsync()
+        public async Task<IEnumerable<PurchaseOrderDto>> GetAllPurchaseOrdersAsync()
         {
-            return await _repository.GetAllAsync();
+            var purchaseOrders = await _purchaseOrderRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<PurchaseOrderDto>>(purchaseOrders);
         }
 
-        public async Task<PurchaseOrder?> GetByIdAsync(int id)
+        public async Task<PurchaseOrderDto?> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            var purchaseOrder = await _purchaseOrderRepository.GetByIdAsync(id);
+            return _mapper.Map<PurchaseOrderDto>(purchaseOrder);
         }
 
-        public async Task<PurchaseOrder> CreateAsync(PurchaseOrder purchaseOrder)
+        // This method now correctly implements the interface
+        public async Task<PurchaseOrder> CreatePurchaseOrderAsync(CreatePurchaseOrderDto purchaseOrderDto)
         {
-            return await _repository.CreateAsync(purchaseOrder);
+            var purchaseOrder = _mapper.Map<PurchaseOrder>(purchaseOrderDto);
+            purchaseOrder.OrderDate = DateTime.UtcNow;
+            purchaseOrder.TotalAmount = purchaseOrderDto.Items.Sum(i => i.Quantity * i.UnitPrice);
+
+            foreach (var item in purchaseOrder.Items)
+            {
+                // Find the specific shoe variation to update its stock
+                var shoeVariation = await _shoeRepository.GetColorVariationByIdAsync(item.ShoeColorVariationId);
+                if (shoeVariation != null)
+                {
+                    shoeVariation.StockQuantity += item.QuantityOrdered; // Assuming QuantityOrdered is the correct property
+                }
+            }
+
+            await _purchaseOrderRepository.AddAsync(purchaseOrder);
+            await _shoeRepository.SaveChangesAsync(); // Saves all changes to the database
+
+            return purchaseOrder;
         }
 
-        public async Task UpdateAsync(PurchaseOrder purchaseOrder)
+        public Task UpdateAsync(PurchaseOrder purchaseOrder)
         {
-            await _repository.UpdateAsync(purchaseOrder);
+            return _purchaseOrderRepository.UpdateAsync(purchaseOrder);
         }
 
-        public async Task DeleteAsync(int id)
+        public Task DeleteAsync(int id)
         {
-            await _repository.DeleteAsync(id);
+            return _purchaseOrderRepository.DeleteAsync(id);
         }
     }
 }

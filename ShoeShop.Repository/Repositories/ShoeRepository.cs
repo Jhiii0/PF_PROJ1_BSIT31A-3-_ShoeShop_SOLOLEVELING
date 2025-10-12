@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShoeShop.Repository.Data;
+using ShoeShop.Repository.Data.Interfaces;
 using ShoeShop.Repository.Entities;
-using ShoeShop.Repository.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,18 +17,36 @@ namespace ShoeShop.Repository.Repositories
             _context = context;
         }
 
+        // Ito ang inayos na method para sa shoe dropdown
+        public async Task<IEnumerable<Shoe>> GetAllShoesAsync()
+        {
+            return await _context.Shoes.AsNoTracking().ToListAsync();
+        }
+
+        // --- Iba pang methods ---
         public async Task<IEnumerable<Shoe>> GetAllAsync()
         {
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .ToListAsync();
+            return await _context.Shoes.Include(s => s.ColorVariations).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Shoe>> GetAllWithVariationsAsync()
+        {
+            return await _context.Shoes.Include(s => s.ColorVariations).ToListAsync();
         }
 
         public async Task<Shoe?> GetByIdAsync(int id)
         {
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .FirstOrDefaultAsync(s => s.Id == id);
+            return await _context.Shoes.FindAsync(id);
+        }
+
+        public async Task<Shoe?> GetByIdWithVariationsAsync(int id)
+        {
+            return await _context.Shoes.Include(s => s.ColorVariations).FirstOrDefaultAsync(s => s.Id == id);
+        }
+
+        public async Task<ShoeColorVariation?> GetColorVariationByIdAsync(int id)
+        {
+            return await _context.ShoeColorVariations.FindAsync(id);
         }
 
         public async Task AddAsync(Shoe shoe)
@@ -36,36 +54,21 @@ namespace ShoeShop.Repository.Repositories
             await _context.Shoes.AddAsync(shoe);
         }
 
-        public async Task UpdateAsync(Shoe shoe)
+        public Task UpdateAsync(Shoe shoe)
         {
             _context.Shoes.Update(shoe);
-            await Task.CompletedTask;
+            return Task.CompletedTask;
         }
 
-        public async Task DeleteAsync(Shoe shoe)
+        public Task DeleteAsync(Shoe shoe)
         {
             _context.Shoes.Remove(shoe);
-            await Task.CompletedTask;
+            return Task.CompletedTask;
         }
 
-        // FIXED: dapat Task, hindi void
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
         }
-        public async Task<IEnumerable<Shoe>> GetAllWithVariationsAsync()
-        {
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .ToListAsync();
-        }
-
-        public async Task<Shoe?> GetByIdWithVariationsAsync(int id)
-        {
-            return await _context.Shoes
-                                 .Include(s => s.ColorVariations)
-                                 .FirstOrDefaultAsync(s => s.Id == id);
-        }
-
     }
 }
