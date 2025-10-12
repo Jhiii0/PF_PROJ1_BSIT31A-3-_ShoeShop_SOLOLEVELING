@@ -42,6 +42,12 @@ namespace ShoeShop.Services.Services
             purchaseOrder.OrderDate = DateTime.UtcNow;
             purchaseOrder.TotalAmount = purchaseOrderDto.Items.Sum(i => i.Quantity * i.UnitPrice);
 
+            // Generate a unique and shorter order number
+            purchaseOrder.OrderNumber = $"PO-{DateTime.UtcNow:yyyyMMddHHmmss}";
+
+            // Set a default status
+            purchaseOrder.Status = "Pending";
+
             foreach (var item in purchaseOrder.Items)
             {
                 // Find the specific shoe variation to update its stock
