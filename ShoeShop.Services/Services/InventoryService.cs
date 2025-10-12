@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ShoeShop.Repository.Data.Interfaces; // THIS is the corrected line
 using ShoeShop.Repository.Entities;
 using ShoeShop.Repository.Interfaces;
 using ShoeShop.Services.DTOs;
@@ -51,7 +52,6 @@ namespace ShoeShop.Services.Services
             return shoe == null ? null : _mapper.Map<ShoeDto>(shoe);
         }
 
-        // FIX: Idinagdag ang missing method para ma-implement ang IInventoryService
         public async Task<int> GetStockQuantityAsync(int shoeId)
         {
             var shoe = await _shoeRepository.GetByIdWithVariationsAsync(shoeId);
@@ -74,7 +74,6 @@ namespace ShoeShop.Services.Services
 
             _mapper.Map(dto, shoeToUpdate);
 
-            // Tiyakin na ang ColorVariations ay maayos na na-u-update
             var updatedVariations = dto.ColorVariations.Select(v => _mapper.Map<ShoeColorVariation>(v)).ToList();
             shoeToUpdate.ColorVariations.Clear();
             foreach (var variation in updatedVariations)
@@ -91,7 +90,6 @@ namespace ShoeShop.Services.Services
             var shoeToDelete = await _shoeRepository.GetByIdWithVariationsAsync(id);
             if (shoeToDelete != null)
             {
-                // FIX: Ang interface ay nangangailangan ng Shoe entity, hindi ID.
                 await _shoeRepository.DeleteAsync(shoeToDelete);
                 await _shoeRepository.SaveChangesAsync();
             }
@@ -107,15 +105,14 @@ namespace ShoeShop.Services.Services
 
             variation.StockQuantity += quantityChange;
 
-            // Ito ang nagre-record ng Pull-Out/Stock-In Transaction
             var pullOut = new StockPullOut
             {
                 ShoeColorVariationId = variation.Id,
-                Quantity = Math.Abs(quantityChange), // Ginagamit ang absolute value
+                Quantity = Math.Abs(quantityChange),
                 Reason = reason,
                 RequestedBy = user,
                 PullOutDate = DateTime.UtcNow,
-                Status = quantityChange > 0 ? "RECEIVED" : "PULLED_OUT" // Status based on quantityChange sign
+                Status = quantityChange > 0 ? "RECEIVED" : "PULLED_OUT"
             };
 
             await _pullOutRepository.AddAsync(pullOut);
@@ -153,7 +150,7 @@ namespace ShoeShop.Services.Services
         {
             var allShoes = await _shoeRepository.GetAllWithVariationsAsync();
             var variation = allShoes.SelectMany(s => s.ColorVariations)
-                                     .FirstOrDefault(v => v.Id == variationId);
+                                      .FirstOrDefault(v => v.Id == variationId);
 
             return variation == null ? null : _mapper.Map<ColorVariationDto>(variation);
         }
@@ -192,13 +189,9 @@ namespace ShoeShop.Services.Services
 
         // --- Pull Out History ---
 
-        // Pinalitan ang lumang GetPullOutHistoryForShoeAsync(int shoeId)
         public async Task<IEnumerable<StockPullOutDto>> GetAllPullOutHistoryAsync()
         {
-            // Kukunin ang lahat ng StockPullOut Entities (Ipagpalagay na ang GetAllPullOutsAsync() ay available)
             var allPullOuts = await _pullOutRepository.GetAllPullOutsAsync();
-
-            // I-ma-map ang Entities sa DTOs
             return _mapper.Map<IEnumerable<StockPullOutDto>>(allPullOuts);
         }
 
@@ -206,7 +199,6 @@ namespace ShoeShop.Services.Services
         {
             public InventoryMappingProfile()
             {
-                // I-map ang database entity (source) sa DTO (destination)
                 CreateMap<StockPullOut, PullOutRequestDto>();
             }
         }

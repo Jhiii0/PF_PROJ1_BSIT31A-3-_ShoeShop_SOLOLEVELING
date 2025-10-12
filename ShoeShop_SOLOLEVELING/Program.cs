@@ -1,47 +1,47 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ShoeShop.Repository.Data;
+using ShoeShop.Repository.Data.Interfaces;
 using ShoeShop.Repository.Entities;
 using ShoeShop.Repository.Interfaces;
 using ShoeShop.Repository.Repositories;
 using ShoeShop.Services.Interfaces;
+using ShoeShop.Services.Mapping;
 using ShoeShop.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+// THIS IS THE CORRECTED LINE - It now uses UseSqlServer to match your appsettings.json
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? "Server=localhost;Database=ShoeShopDb;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True")
-);
+// --- Add AutoMapper ---
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-// Configure ASP.NET Core Identity with new password rules
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-{
-    options.SignIn.RequireConfirmedAccount = false;
-    options.Password.RequireDigit = true;
-    options.Password.RequiredLength = 6;
-    options.Password.RequireNonAlphanumeric = true; // Ito ay para sa special character
-    options.Password.RequireUppercase = true; // Ito ay para sa uppercase letter
-    options.Password.RequireLowercase = false;
-})
-.AddEntityFrameworkStores<ApplicationDbContext>()
-.AddDefaultTokenProviders();
 
-// Your other services
+// --- REPOSITORY AND SERVICE REGISTRATIONS ---
+
+// Repositories
 builder.Services.AddScoped<IShoeRepository, ShoeRepository>();
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
 builder.Services.AddScoped<IStockPullOutRepository, StockPullOutRepository>();
-builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 
+
+// Services
 builder.Services.AddScoped<IInventoryService, InventoryService>();
-builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
-builder.Services.AddScoped<IPullOutService, PullOutService>();
 builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IPullOutService, PullOutService>();
+builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
 
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -57,7 +57,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Add Authentication and Authorization middleware
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -65,5 +64,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+app.MapRazorPages();
 
+app.Run();

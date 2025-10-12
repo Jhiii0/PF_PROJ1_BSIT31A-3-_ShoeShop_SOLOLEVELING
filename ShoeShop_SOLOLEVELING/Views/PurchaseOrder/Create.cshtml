@@ -1,0 +1,120 @@
+﻿@model ShoeShop.Services.DTOs.CreatePurchaseOrderDto
+
+@{
+    ViewData["Title"] = "Create Purchase Order";
+}
+
+<h1>Create Purchase Order</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="SupplierId" class="control-label"><strong>Supplier</strong></label>
+                <select asp-for="SupplierId" class="form-control" asp-items="ViewBag.Suppliers">
+                    <option value="">-- Select Supplier --</option>
+                </select>
+                <span asp-validation-for="SupplierId" class="text-danger"></span>
+            </div>
+
+            <h3 class="mt-4">Items</h3>
+            <table class="table table-bordered" id="itemsTable">
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Shoe</th>
+                        <th style="width: 15%;">Quantity</th>
+                        <th style="width: 15%;">Unit Price ($)</th>
+                        <th style="width: 20%;">Subtotal</th>
+                        <th style="width: 10%;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right"><strong>Total Amount:</strong></td>
+                        <td id="totalAmount"><strong>$0.00</strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button type="button" id="addItemBtn" class="btn btn-secondary"><i class="fas fa-plus"></i> Add Item</button>
+
+            <div class="form-group mt-4">
+                <input type="submit" value="Create Order" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-light">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            let itemIndex = 0;
+            // DITO ANG PANGALAWANG MAHALAGANG PAGBABAGO
+            const shoes = @Html.Raw(Json.Serialize(ViewBag.Shoes as IEnumerable<ShoeShop.Repository.Entities.Shoe>));
+
+            function addNewRow() {
+                 var row = `
+                    <tr class="item-row">
+                        <td>
+                            <select name="Items[${itemIndex}].ShoeId" class="form-control shoe-select" required>
+                                <option value="">-- Select Shoe --</option>`;
+                // Aayusin natin ang loop para basahin ang tamang properties
+                if (shoes) {
+                    shoes.forEach(function(shoe) {
+                        row += `<option value="${shoe.id}">${shoe.name}</option>`; // Binago sa shoe.id at shoe.name
+                    });
+                }
+                row += `
+                            </select>
+                        </td>
+                        <td><input type="number" name="Items[${itemIndex}].Quantity" class="form-control quantity" min="1" value="1" /></td>
+                        <td><input type="number" name="Items[${itemIndex}].UnitPrice" class="form-control unit-price" min="0" step="0.01" value="0.00" /></td>
+                        <td class="subtotal text-right">$0.00</td>
+                        <td class="text-center"><button type="button" class="btn btn-danger btn-sm remove-item">Remove</button></td>
+                    </tr>`;
+                $('#itemsTable tbody').append(row);
+                itemIndex++;
+            }
+
+            $("#addItemBtn").click(addNewRow);
+
+            $('#itemsTable').on('click', '.remove-item', function () {
+                $(this).closest('tr').remove();
+                updateTotalAmount();
+            });
+
+            function calculateSubtotal(row) {
+                var quantity = parseFloat($(row).find('.quantity').val()) || 0;
+                var unitPrice = parseFloat($(row).find('.unit-price').val()) || 0;
+                var subtotal = quantity * unitPrice;
+                $(row).find('.subtotal').text('$' + subtotal.toFixed(2));
+                updateTotalAmount();
+            }
+
+            function updateTotalAmount() {
+                let total = 0;
+                $('#itemsTable tbody tr').each(function() {
+                    var quantity = parseFloat($(this).find('.quantity').val()) || 0;
+                    var unitPrice = parseFloat($(this).find('.unit-price').val()) || 0;
+                    total += quantity * unitPrice;
+                });
+                $('#totalAmount').html('<strong>$' + total.toFixed(2) + '</strong>');
+            }
+
+            $('#itemsTable').on('input', '.quantity, .unit-price', function () {
+                calculateSubtotal($(this).closest('tr'));
+            });
+
+            addNewRow();
+        });
+    </script>
+}

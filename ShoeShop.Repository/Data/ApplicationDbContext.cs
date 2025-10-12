@@ -4,7 +4,6 @@ using ShoeShop.Repository.Entities;
 
 namespace ShoeShop.Repository.Data
 {
-    // The class must inherit from IdentityDbContext<ApplicationUser>
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -12,7 +11,6 @@ namespace ShoeShop.Repository.Data
         {
         }
 
-        // Ito ang magiging tables mo sa database
         public DbSet<Shoe> Shoes { get; set; }
         public DbSet<ShoeColorVariation> ShoeColorVariations { get; set; }
         public DbSet<StockPullOut> StockPullOuts { get; set; }
@@ -20,13 +18,13 @@ namespace ShoeShop.Repository.Data
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
         public DbSet<PurchaseOrderItem> PurchaseOrderItems { get; set; }
 
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            // This line is crucial for Identity to configure its tables
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(builder);
 
-            // Your existing data seeding can go here if you have any
+            // ITO ANG NAWAWALANG LINYA NG CODE:
+            // Tinatawag nito ang Seed method para ma-insert ang data.
+            builder.Seed();
         }
     }
 }

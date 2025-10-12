@@ -1,7 +1,7 @@
-﻿using ShoeShop.Repository.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoeShop.Repository.Data;
+using ShoeShop.Repository.Data.Interfaces;
 using ShoeShop.Repository.Entities;
-using ShoeShop.Repository.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,34 +18,44 @@ namespace ShoeShop.Repository.Repositories
 
         public async Task<IEnumerable<PurchaseOrder>> GetAllAsync()
         {
-            return await _context.PurchaseOrders.ToListAsync();
+            
+            return await _context.PurchaseOrders
+                                 .Include(po => po.Supplier)
+                                 .Include(po => po.Items)
+                                     
+                                     .ThenInclude(item => item.ShoeColorVariation)
+                                    
+                                     .ThenInclude(scv => scv.Shoe)
+                                 .ToListAsync();
         }
 
         public async Task<PurchaseOrder?> GetByIdAsync(int id)
         {
-            return await _context.PurchaseOrders.FindAsync(id);
+            return await _context.PurchaseOrders
+                                 .Include(po => po.Supplier)
+                                 .Include(po => po.Items)
+                                     .ThenInclude(item => item.ShoeColorVariation)
+                                     .ThenInclude(scv => scv.Shoe)
+                                 .FirstOrDefaultAsync(po => po.Id == id);
         }
 
-        public async Task<PurchaseOrder> CreateAsync(PurchaseOrder purchaseOrder)
+        public async Task AddAsync(PurchaseOrder purchaseOrder)
         {
-            _context.PurchaseOrders.Add(purchaseOrder);
-            await _context.SaveChangesAsync();
-            return purchaseOrder;
+            await _context.PurchaseOrders.AddAsync(purchaseOrder);
         }
 
-        public async Task UpdateAsync(PurchaseOrder purchaseOrder)
+        public Task UpdateAsync(PurchaseOrder purchaseOrder)
         {
             _context.PurchaseOrders.Update(purchaseOrder);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task DeleteAsync(int id)
         {
-            var existing = await _context.PurchaseOrders.FindAsync(id);
-            if (existing != null)
+            var purchaseOrder = await GetByIdAsync(id);
+            if (purchaseOrder != null)
             {
-                _context.PurchaseOrders.Remove(existing);
-                await _context.SaveChangesAsync();
+                _context.PurchaseOrders.Remove(purchaseOrder);
             }
         }
     }

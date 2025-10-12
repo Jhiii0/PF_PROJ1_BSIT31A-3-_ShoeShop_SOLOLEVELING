@@ -11,54 +11,58 @@ namespace ShoeShop.Services.Mapping
         {
             // --- SHOE MAPPINGS (DTO <-> ENTITY) ---
 
-            // Shoe Entity to Shoe DTO (Kaya mong i-display ang database data)
             CreateMap<Shoe, ShoeDto>()
                 .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Name))
                 .ForMember(dest => dest.RetailPrice, opt => opt.MapFrom(src => src.Price))
                 .ForMember(dest => dest.ColorVariations, opt => opt.MapFrom(src => src.ColorVariations))
-                .ReverseMap() // Pinapagana ang mapping mula DTO pabalik sa Entity
-                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.RetailPrice)) // Tugma sa DTO->Entity
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ModelName))   // Tugma sa DTO->Entity
+                .ReverseMap()
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.RetailPrice))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ModelName))
                 .ForMember(dest => dest.ColorVariations, opt => opt.MapFrom(src => src.ColorVariations))
                 .ForMember(dest => dest.Id, opt => opt.Ignore());
 
-
-            // CreateShoeDto to Shoe Entity (Ginagamit sa CreateShoeAsync)
             CreateMap<CreateShoeDto, Shoe>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ModelName))
                 .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.RetailPrice))
                 .ForMember(dest => dest.ColorVariations, opt => opt.MapFrom(src => src.ColorVariations))
-                .ForMember(dest => dest.Id, opt => opt.Ignore()); // Hayaan ang database ang magbigay ng Id
-
+                .ForMember(dest => dest.Id, opt => opt.Ignore());
 
             // --- COLOR VARIATIONS MAPPINGS ---
 
-            // DTO <-> Entity
             CreateMap<ColorVariationDto, ShoeColorVariation>()
                 .ForMember(dest => dest.ColorName, opt => opt.MapFrom(src => src.Color))
                 .ReverseMap()
                 .ForMember(dest => dest.Color, opt => opt.MapFrom(src => src.ColorName));
 
-
-            // CreateColorVariationDto to ShoeColorVariation Entity
             CreateMap<CreateColorVariationDto, ShoeColorVariation>()
                 .ForMember(dest => dest.ColorName, opt => opt.MapFrom(src => src.Color))
                 .ForMember(dest => dest.Id, opt => opt.Ignore());
 
             // --- INVENTORY / TRANSACTION MAPPINGS ---
 
-            // Pull Out Requests
             CreateMap<CreatePullOutDto, StockPullOut>();
             CreateMap<StockPullOut, PullOutRequestDto>().ReverseMap();
-
-            // Additional PullOut Mapping for completeness
             CreateMap<StockPullOut, StockPullOutDto>().ReverseMap();
-
 
             // --- SUPPLIER MAPPINGS ---
 
-            // Assuming SupplierDto and Supplier exist
-            CreateMap<SupplierDto, Supplier>().ReverseMap(); // Two-way mapping
+            CreateMap<SupplierDto, Supplier>().ReverseMap();
+
+            // --- PURCHASE ORDER MAPPINGS (THESE ARE THE NEW MAPPINGS) ---
+
+            // Maps the DTO used for creating a purchase order to the database entity.
+            CreateMap<CreatePurchaseOrderDto, PurchaseOrder>();
+
+            // Maps a single item from the create DTO to the database entity.
+            // It correctly maps the 'ShoeId' from the DTO to 'ShoeColorVariationId' in the entity.
+            CreateMap<PurchaseOrderItemDto, PurchaseOrderItem>()
+                .ForMember(dest => dest.ShoeColorVariationId, opt => opt.MapFrom(src => src.ShoeId))
+                .ForMember(dest => dest.QuantityOrdered, opt => opt.MapFrom(src => src.Quantity))
+                .ForMember(dest => dest.UnitCost, opt => opt.MapFrom(src => src.UnitPrice));
+
+            // Maps a PurchaseOrder entity from the database to the DTO used for displaying it.
+            CreateMap<PurchaseOrder, PurchaseOrderDto>()
+                .ForMember(dest => dest.SupplierName, opt => opt.MapFrom(src => src.Supplier != null ? src.Supplier.Name : string.Empty));
         }
     }
 }
